@@ -17,7 +17,9 @@ function App() {
   const ThemeContext = React.createContext(themes.green);
   return (
     <>
-      <ChildCardComponent />
+      <ThemeContext.Provider value={themes.red}>
+        <ChildCardComponent />
+      </ThemeContext.Provider>
     </>
   );
 
