@@ -18,18 +18,18 @@ function App() {
       <ChildCardComponent />
     </>
   );
-}
 
-function ChildCardComponent() {
-  return (
-    <>
-      <Card style={{ width: "18rem" }}>
-        <Card.Body>
-          <Card.Title>Child Card Component</Card.Title>
-        </Card.Body>
-      </Card>
-    </>
-  );
+  function ChildCardComponent() {
+    return (
+      <>
+        <Card style={{ width: "18rem" }}>
+          <Card.Body>
+            <Card.Title>Child Card Component</Card.Title>
+          </Card.Body>
+        </Card>
+      </>
+    );
+  }
 }
 
 export default App;
