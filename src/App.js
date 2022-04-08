@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
 
@@ -13,6 +13,8 @@ function App() {
       background: "#FF0000",
     },
   };
+
+  const ThemeContext = React.createContext(themes.green);
   return (
     <>
       <ChildCardComponent />
@@ -26,7 +28,21 @@ function App() {
           <Card.Body>
             <Card.Title>Child Card Component</Card.Title>
           </Card.Body>
+          <GrandChildButtonComponent />
         </Card>
+      </>
+    );
+  }
+
+  function GrandChildButtonComponent() {
+    const theme = useContext(ThemeContext);
+    return (
+      <>
+        <button
+          style={{ background: theme.background, color: theme.foreground }}
+        >
+          Theme Button
+        </button>
       </>
     );
   }
